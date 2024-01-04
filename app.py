@@ -6,8 +6,8 @@ import numpy as np
 import sklearn
 from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
-#model = pickle.load(open('random_forest_regression_model.pkl','rb'))
-model = np.load('random_forest_regression_model.pkl',allow_pickle=True)
+model = pickle.load(open('random_forest_regression_model.pkl','rb'))
+#model = np.load('random_forest_regression_model.pkl',allow_pickle=True)
 @app.route('/',methods=['GET'])
 def Home():
     return render_template('index.html')
